@@ -1,0 +1,403 @@
+{
+	autofocus_id: "50DD6E1D03687490"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "learning_the_ropes"
+	group: "1018CBC529127568"
+	icon: {
+		id: "createmechanisms:wooden_mechanism"
+	}
+	id: "42E0B5207C99CA40"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "50DD6E1D03687490"
+			size: 1.5d
+			tasks: [{
+				id: "67F22A278EB88E5F"
+				type: "checkmark"
+			}]
+			x: -12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"67F22A278EB88E5F"
+				"50DD6E1D03687490"
+			]
+			id: "231FFC7D88E8B8F5"
+			optional: true
+			rewards: [{
+				count: 4
+				id: "262D88CE2BAF2CEA"
+				item: {
+					count: 1
+					id: "minecraft:leather"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2893DCFE463A0B95"
+				item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["231FFC7D88E8B8F5"]
+			id: "591297B54C7628FC"
+			optional: true
+			rewards: [{
+				id: "4BBB1BBF9805632B"
+				item: {
+					count: 1
+					id: "minecraft:honey_bottle"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "32704840A287CF77"
+				item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["231FFC7D88E8B8F5"]
+			id: "7A4053225E5EAD24"
+			optional: true
+			rewards: [{
+				id: "5A156AF40988A7AB"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			tasks: [{
+				id: "54B046D7389A711F"
+				item: { count: 1, id: "sophisticatedbackpacks:iron_backpack" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["591297B54C7628FC"]
+			id: "507032F5315898A8"
+			optional: true
+			rewards: [{
+				id: "24B3BBB82383510D"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+			tasks: [{
+				id: "55C76C029AFC95D5"
+				item: { count: 1, id: "sophisticatedbackpacks:stack_upgrade_starter_tier" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "3E21B8026D3CFCF4"
+			optional: true
+			rewards: [{
+				id: "1C82C67CC24BC513"
+				item: {
+					count: 1
+					id: "minecraft:iron_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1ED03EE678E1EEEB"
+				item: { count: 1, id: "mekanismtools:iron_paxel" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "331ED897043A29CD"
+			optional: true
+			rewards: [{
+				id: "47BF2F96D10B0FDC"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [{
+				id: "0B8C198A82608D9D"
+				item: { count: 1, id: "comforts:sleeping_bag_white" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "195CA38F64D099B4"
+			rewards: [{
+				count: 4
+				id: "059A8736B1FC3D5C"
+				item: {
+					count: 1
+					id: "minecraft:iron_nugget"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "6979FE59ACE81722"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			id: "11EA9396EC583AD5"
+			rewards: [{
+				count: 2
+				id: "25C1A2C4933D6DA3"
+				item: {
+					count: 1
+					id: "create:andesite_alloy"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "690CB2E1E7B2FB42"
+				item: { count: 1, id: "create:shaft" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "5DF8BDACCA8B7402"
+			tasks: [{
+				id: "5222CC6113F22E12"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"037CF870138F36F6"
+				"106B697499DD090B"
+			]
+			dependency_requirement: "one_completed"
+			id: "76FEC02C5780C05D"
+			tasks: [
+				{
+					id: "1494ABC2409D06AB"
+					item: { count: 1, id: "createmechanisms:iron_saw" }
+					type: "item"
+				}
+				{
+					id: "23A3539805F7C702"
+					item: { count: 1, id: "createmechanisms:copper_saw" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"11EA9396EC583AD5"
+				"76FEC02C5780C05D"
+			]
+			id: "46C1A0C0F5D16536"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "47A86A083568B446"
+				item: { count: 1, id: "createmechanisms:wooden_mechanism" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"195CA38F64D099B4"
+				"5DF8BDACCA8B7402"
+			]
+			id: "710365EB98A2BB8A"
+			tasks: [{
+				id: "7AE6EF3A2C84283D"
+				item: { count: 1, id: "createdieselgenerators:hammer" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["710365EB98A2BB8A"]
+			id: "037CF870138F36F6"
+			tasks: [{
+				id: "6D00BCD2AE129DEB"
+				item: { count: 1, id: "create:iron_sheet" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["710365EB98A2BB8A"]
+			id: "106B697499DD090B"
+			tasks: [{
+				id: "04D7E684255D5B2B"
+				item: { count: 1, id: "create:copper_sheet" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5DF8BDACCA8B7402"]
+			id: "12BAA3C04D219063"
+			optional: true
+			tasks: [{
+				id: "4AF804371A291828"
+				item: { count: 1, id: "minecraft:shears" }
+				type: "item"
+			}]
+			x: -8.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["12BAA3C04D219063"]
+			id: "25BCA71E463F5BF1"
+			optional: true
+			tasks: [{
+				id: "30818BBC687A178C"
+				item: { components: { "cold_sweat:armor_insulation": { insulation: [ ] } }, count: 1, id: "cold_sweat:goat_fur_helmet" }
+				type: "item"
+			}]
+			x: -9.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["12BAA3C04D219063"]
+			id: "70576B41E67F9856"
+			optional: true
+			tasks: [{
+				id: "1F18FE7CC9DFFDE6"
+				item: { components: { "cold_sweat:armor_insulation": { insulation: [ ] } }, count: 1, id: "cold_sweat:goat_fur_chestplate" }
+				type: "item"
+			}]
+			x: -8.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["12BAA3C04D219063"]
+			id: "212CD8EC3677C061"
+			optional: true
+			tasks: [{
+				id: "705972905DC6CD2D"
+				item: { components: { "cold_sweat:armor_insulation": { insulation: [ ] } }, count: 1, id: "cold_sweat:goat_fur_leggings" }
+				type: "item"
+			}]
+			x: -7.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["12BAA3C04D219063"]
+			id: "5ECC9FF23E7FE74C"
+			optional: true
+			tasks: [{
+				id: "3F3B217A0412C63E"
+				item: { components: { "cold_sweat:armor_insulation": { insulation: [ ] } }, count: 1, id: "cold_sweat:goat_fur_boots" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["331ED897043A29CD"]
+			id: "725092ADD0064DBF"
+			optional: true
+			tasks: [{
+				id: "1E394FB565848CE9"
+				item: { count: 1, id: "minecraft:campfire" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["331ED897043A29CD"]
+			id: "0FD56F790AC45F98"
+			optional: true
+			tasks: [{
+				id: "530A14928A7B0EF4"
+				item: { count: 1, id: "cold_sweat:thermometer" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["575E18C0DC5E326E"]
+			id: "6C374076B07F6927"
+			optional: true
+			tasks: [{
+				id: "7AAE88DC5882BC5A"
+				item: { components: { "minecraft:potion_contents": { potion: "minecraft:water" }, "thirst:purity": 2 }, count: 1, id: "minecraft:potion" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: -14.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6C374076B07F6927"]
+			id: "7130FE96CB94B476"
+			optional: true
+			tasks: [{
+				id: "6E1B376EFF0255FE"
+				item: { components: { "minecraft:potion_contents": { potion: "minecraft:water" }, "thirst:purity": 3 }, count: 1, id: "minecraft:potion" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: -14.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "575E18C0DC5E326E"
+			optional: true
+			tasks: [{
+				id: "3C09C5EA046809A6"
+				item: { components: { "minecraft:potion_contents": { potion: "minecraft:water" }, "thirst:purity": 0 }, count: 1, id: "minecraft:potion" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["50DD6E1D03687490"]
+			id: "1FF80E2A6C06DE0C"
+			optional: true
+			tasks: [{
+				id: "29AB35E9A6479430"
+				item: { count: 1, id: "cold_sweat:boiler" }
+				type: "item"
+			}]
+			x: -14.5d
+			y: -0.5d
+		}
+	]
+}

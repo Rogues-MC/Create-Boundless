@@ -1,0 +1,14 @@
+GpuShift Benchmark
+Finished: 2026-06-07T22:35:10.437609100Z
+Scenario: World Flythrough
+Actual duration: 101 sec
+Expected duration: 100 sec
+Baseline FPS: 59.39
+OFF avg FPS: 47.22
+ON avg FPS: 29.34
+OFF 1% low FPS: 4.31
+ON 1% low FPS: 2.05
+ON vs OFF: -37.9% / +12.91 ms
+Confidence: MEDIUM
+Recommendation: enabled=false, profile=QUALITY, particles=85%, entity=160m
+Reason: regression

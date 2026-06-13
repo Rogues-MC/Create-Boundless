@@ -1,0 +1,38 @@
+[
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781315747353,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.55.42.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781315313632,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.48.26.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781314978403,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.42.54.hprof"
+    }
+  }
+]
