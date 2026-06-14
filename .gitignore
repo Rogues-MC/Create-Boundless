@@ -4,18 +4,21 @@
 .sable
 .idea
 .probe
+.curseclient
 .vscode
 *.bat
 *.ps1
 *.sh
 *.hprof
 *.DMP
+*.lnk
 /*.json
 /*.txt
 /*.jar
 /*.log
 /*.properties
 /*.json
+/*.dat
 
 HOW-TO-RUN.md
 manifest.json
@@ -30,6 +33,9 @@ local
 libraries
 disabledmods
 crash-reports
+shaderpacks
+resourcepacks
+profileImage
 
 
 config/ftbquests/quests/lang/*.snbt
