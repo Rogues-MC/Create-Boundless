@@ -12,6 +12,7 @@
 *.hprof
 *.DMP
 *.lnk
+*.bak
 /*.json
 /*.txt
 /*.jar
