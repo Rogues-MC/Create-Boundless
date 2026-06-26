@@ -52,6 +52,8 @@ downloads
 particular_cache
 data
 blueprints
+config/ars_nouveau/search_index
+automessage_data
 XaeroWaypoints*
 
 config/ftbquests/quests/lang/*.snbt
