@@ -26,8 +26,6 @@
 	maxStartJoinDistance = 24.0
 	#Stop automated playback when collision is detected.
 	stopOnCollision = true
-	#Stop automated playback when an unrecoverable error is detected.
-	stopOnError = true
 	#How many times longer than the recorded segment duration playback may take before overdue stuck monitoring begins.
 	# Default: 3.0
 	# Range: 1.0 ~ 20.0
@@ -40,24 +38,14 @@
 	# Default: 200
 	# Range: 20 ~ 36000
 	stuckTimeoutTicks = 200
-
-[visuals]
-	#Show route previews while viewing or editing a route.
-	showRoutePreview = true
-	#Maximum route preview range in blocks.
-	# Default: 128
-	# Range: 0 ~ 1024
-	previewRange = 128
+	#Allow a single recorded leg / single stop plan to count as a valid runnable route.
+	allowOneWayRoutePlans = false
 
 [docking]
 	#Search radius in blocks for finding exactly one ground-side Docking Connector near an Airship Station.
 	# Default: 24
 	# Range: 1 ~ 128
 	stationDockSearchRadius = 24
-	#Search radius in blocks for finding exactly one ship-side Docking Connector near a Ship Transponder on an assembled ship.
-	# Default: 24
-	# Range: 1 ~ 128
-	shipDockSearchRadius = 24
 	#Maximum ticks to wait for station and ship Docking Connectors to lock after a docking stop starts.
 	# Default: 200
 	# Range: 20 ~ 12000
@@ -66,10 +54,6 @@
 	# Default: 2400
 	# Range: 20 ~ 36000
 	dockIdleTimeoutTicks = 2400
-	#Maximum ticks to wait for dock-visible cargo threshold conditions before failing playback.
-	# Default: 2400
-	# Range: 20 ~ 36000
-	dockCargoTimeoutTicks = 2400
 
 [limits]
 	#Maximum number of simultaneously active automated vehicles per player.

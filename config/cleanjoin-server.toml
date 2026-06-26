@@ -1,0 +1,55 @@
+#=== Module 1: Clean Join (Configuration Phase) ===
+[cleanJoin]
+	#Safety ceiling in milliseconds. Only triggers if the CompletableFuture
+	#never resolves (e.g. world corruption, extreme GC pressure).
+	#Primary completion signal is always the chunk future, NOT this value.
+	#Range: 500 - 30000 | Default: 1500
+	# Default: 1500
+	# Range: 500 ~ 30000
+	holdBackMs = 1500
+	#Chunk radius around the predicted spawn (0 = spawn chunk only).
+	#Range: 0 - 8 | Default: 3 (= 7x7 = 49 chunks)
+	# Default: 3
+	# Range: 0 ~ 8
+	chunkPreloadRadius = 3
+	#Read EssentialsSpawn/Multiverse configs to predict the final spawn
+	#location and prevent double loading. Disable if no spawn-override
+	#plugins are installed. Default: true
+	predictBukkitSpawn = true
+
+#=== Module 2: Mob Snapshot Optimizer ===
+[mobOptimizer]
+	#Ticks between snapshot cycles. 20 = once per second.
+	#Range: 5 - 200 | Default: 20
+	# Default: 20
+	# Range: 5 ~ 200
+	snapshotIntervalTicks = 20
+	#Horizontal scan radius in blocks for the mob scan.
+	#Range: 16 - 256 | Default: 64
+	# Default: 64
+	# Range: 16 ~ 256
+	snapshotScanRadius = 64
+	#Max mobs that receive NoAI=1 per snapshot cycle.
+	#Range: 10 - 500 | Default: 100
+	# Default: 100
+	# Range: 10 ~ 500
+	snapshotMaxThrottle = 100
+
+#=== Module 3: Progressive Entity Sync (Drip-Feed) ===
+[dripFeed]
+	#Entities sent per tick during the drip-feed window.
+	#Range: 1 - 50 | Default: 10
+	# Default: 10
+	# Range: 1 ~ 50
+	entitiesPerTick = 10
+	#Duration of the drip-feed window in ticks after player join.
+	#Range: 10 - 200 | Default: 40 (= 2 seconds)
+	# Default: 40
+	# Range: 10 ~ 200
+	windowTicks = 40
+
+#=== Module 4: Arclight Safety ===
+[arclightSafety]
+	#Verbose logging for Arclight NMS compatibility decisions.
+	#Default: false
+	debugLogging = false

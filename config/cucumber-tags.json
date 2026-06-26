@@ -5,7 +5,7 @@
   "c:gems/sapphire": "null",
   "c:ingots/bronze": "mekanism:ingot_bronze",
   "c:ingots/electrum": "createaddition:electrum_ingot",
-  "c:silicon": "refinedstorage:silicon",
+  "c:silicon": "ae2:silicon",
   "c:gems/apatite": "null",
   "c:ingots/silver": "immersiveengineering:ingot_silver",
   "c:dusts/saltpeter": "tfmg:nitrate_dust",

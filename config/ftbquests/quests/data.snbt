@@ -13,7 +13,7 @@
 	grid_scale: 0.5d
 	hide_excluded_quests: false
 	icon: {
-		id: "create_sa:heap_of_experience"
+		id: "supplementaries:globe"
 	}
 	lock_message: ""
 	loot_crate_no_drop: {

@@ -78,7 +78,7 @@
 			id: "4DF9AB2F4D36B001"
 			item: {
 				count: 1
-				id: "create:brass_ingot"
+				id: "unify:brass_ingot"
 			}
 			random_bonus: 3
 			weight: 0.4f
@@ -123,7 +123,7 @@
 			id: "34E84D4E6E2F4A54"
 			item: {
 				count: 1
-				id: "create:zinc_ingot"
+				id: "unify:zinc_ingot"
 			}
 		}
 		{

@@ -13,6 +13,9 @@
 *.DMP
 *.lnk
 *.bak
+*.gc
+*.ref
+*.map
 /*.json
 /*.txt
 /*.jar
@@ -37,7 +40,19 @@ crash-reports
 shaderpacks
 resourcepacks
 profileImage
-
+saves
+cache
+adaptive_performance_tweaks
+dynamic-resource-pack-cache
+dynamic-data-pack-cache
+xaero
+debug
+fancymenu_data
+downloads
+particular_cache
+data
+blueprints
+XaeroWaypoints*
 
 config/ftbquests/quests/lang/*.snbt
 

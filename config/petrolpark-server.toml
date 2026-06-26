@@ -48,14 +48,15 @@ syncChiseledBookshelves = true
 	#.
 	[compatibility.create]
 		#.
-		"Crushing Wheels can be encased in Brass Casing, allowing a Recipe filter to be set" = true
-		#.
 		#[Must be enabled by a dependent]
 		#Whether Mechanical Arms can take from and place on Chain Conveyors
 		armsTargetChainConveyors = false
 		#.
 		#Whether Drying Recipes can be done on Chain Conveyors
 		chainConveyorDrying = true
+		#.
+		#Crushing Wheels can be encased in Brass Casing, allowing a Recipe filter to be set
+		encasedCrushingWheels = true
 
 		#.
 		[compatibility.create.centrifuge]

@@ -40,7 +40,7 @@
     "elevation_boost": 0.0,
     "lava_tunnels": true,
     "max_y": 384,
-    "min_y": -128,
+    "min_y": -64,
     "ultrasmooth": true,
     "vertical_scale": 1.125
   },

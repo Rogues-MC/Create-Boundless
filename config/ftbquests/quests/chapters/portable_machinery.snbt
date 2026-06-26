@@ -12,12 +12,6 @@
 	quests: [
 		{
 			id: "1D87F4F592A76129"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "2C15CDA6E9325782"
-				table_id: 2000574392533299735L
-				type: "random"
-			}]
 			size: 1.5d
 			tasks: [{
 				id: "5B87A3BDFF0BC086"
@@ -30,22 +24,6 @@
 		{
 			dependencies: ["1D87F4F592A76129"]
 			id: "7C5D53E05B7C274A"
-			rewards: [
-				{
-					id: "7842BF0CC2F8D98E"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-				{
-					count: 8
-					id: "1C5D1EFB418C333F"
-					item: {
-						count: 1
-						id: "minecraft:dried_kelp"
-					}
-					type: "item"
-				}
-			]
 			tasks: [{
 				count: 16L
 				id: "0FAA04821242FA9C"
@@ -58,11 +36,6 @@
 		{
 			dependencies: ["1D87F4F592A76129"]
 			id: "6FBE5CCBE930C952"
-			rewards: [{
-				id: "1C4A627DBB812632"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				count: 8L
 				id: "017E8EEB4AA900E1"
@@ -75,11 +48,6 @@
 		{
 			dependencies: ["1D87F4F592A76129"]
 			id: "07F161B77DC099CA"
-			rewards: [{
-				id: "3E96BE665D2E4AB4"
-				type: "xp_levels"
-				xp_levels: 2
-			}]
 			tasks: [{
 				id: "0983773C2642A272"
 				item: { count: 1, id: "minecraft:honey_bottle" }
@@ -91,12 +59,6 @@
 		{
 			dependencies: ["6FBE5CCBE930C952"]
 			id: "0F238416CFB2F2C4"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "7B9D27E0FF42B0BD"
-				table_id: 2000574392533299735L
-				type: "random"
-			}]
 			tasks: [{
 				id: "5687A12D049BFAEC"
 				item: { count: 1, id: "create:super_glue" }
@@ -134,7 +96,7 @@
 			tasks: [{
 				count: 8L
 				id: "646D8C4A15B51698"
-				item: { count: 1, id: "create:zinc_ingot" }
+				item: { count: 1, id: "unify:zinc_ingot" }
 				type: "item"
 			}]
 			x: -6.5d
@@ -148,7 +110,7 @@
 			id: "36860FF5780CB271"
 			tasks: [{
 				id: "3A049809304D03E6"
-				item: { count: 1, id: "create:brass_ingot" }
+				item: { count: 1, id: "unify:brass_ingot" }
 				type: "item"
 			}]
 			x: -5.0d
@@ -662,7 +624,7 @@
 			id: "4763FB816F406C2E"
 			tasks: [{
 				id: "481D287FC7B4ED75"
-				item: { count: 1, id: "kubejs:bronze_sheet" }
+				item: { count: 1, id: "unify:bronze_sheet" }
 				type: "item"
 			}]
 			x: -3.5d
