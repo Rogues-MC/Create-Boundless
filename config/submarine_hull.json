@@ -38321,6 +38321,106 @@
     "maxWaterDepth": 100,
     "implosionChance": 0.05
   },
+  "chiselsandbits:bit_storage": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseled": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseled_printer": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledamethyst": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledclay": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledcloth": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledfluid": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledfroglight": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledglass": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledgrass": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledground": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledice": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiselediron": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledleaves": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiselednether_wood": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledpacked_ice": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledplant": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledrock": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledsand": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledsnow": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledwood": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:chiseledwool": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:modification_table": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:pattern_scanner": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.67
+  },
+  "chiselsandbits:reflection_helper_block": {
+    "maxWaterDepth": 1,
+    "implosionChance": 0.85
+  },
   "citadel:lectern": {
     "maxWaterDepth": 25,
     "implosionChance": 0.85
