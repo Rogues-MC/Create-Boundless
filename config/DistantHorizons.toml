@@ -204,7 +204,7 @@ _version = 4
 			# to cause frame stuttering and/or other issues.
 			logGarbageCollectorWarning = false
 			#
-			# If enabled, a chat message will be displayed in chat if the garbage 
+			# If enabled, a chat message will be displayed if the garbage 
 			# collector Java is currently using is known 
 			# to cause frame stuttering and/or other issues.
 			showGarbageCollectorWarning = false
@@ -307,7 +307,7 @@ _version = 4
 			#
 			# Should Distant Horizons silently, automatically download and install new versions? 
 			# This setting is force disabled on dedicated servers for stability reasons.
-			enableSilentUpdates = true
+			enableSilentUpdates = false
 
 		[client.advanced.debugging]
 			#
