@@ -1985,10 +1985,6 @@
     "maxWaterDepth": 61,
     "implosionChance": 0.6333333
   },
-  "ars_nouveau:starbuncle_plush": {
-    "maxWaterDepth": 13,
-    "implosionChance": 0.85
-  },
   "ars_nouveau:storage_lectern": {
     "maxWaterDepth": 30,
     "implosionChance": 0.82
@@ -115356,6 +115352,22 @@
   "trashcans:ultimate_trash_can": {
     "maxWaterDepth": 90,
     "implosionChance": 0.46
+  },
+  "trmt:eroded_coarse_dirt": {
+    "maxWaterDepth": 8,
+    "implosionChance": 0.85
+  },
+  "trmt:eroded_dirt": {
+    "maxWaterDepth": 8,
+    "implosionChance": 0.85
+  },
+  "trmt:eroded_grass_block": {
+    "maxWaterDepth": 10,
+    "implosionChance": 0.85
+  },
+  "trmt:eroded_sand": {
+    "maxWaterDepth": 8,
+    "implosionChance": 0.85
   },
   "unify:aluminum_block": {
     "maxWaterDepth": 89,

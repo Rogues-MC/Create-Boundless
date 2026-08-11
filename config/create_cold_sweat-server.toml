@@ -1,7 +1,7 @@
 #Create: Cold Sweat settings
 [General]
 	#Should blaze burners apply heat?
-	"Blaze burner" = true
+	"Blaze burner" = false
 	#Blaze burner smouldering temperature (MC UNITS)
 	# Default: 0.04291845493562232
 	# Range: 0.0 ~ 1.0
@@ -23,7 +23,7 @@
 	# Range: 1 ~ 16
 	"Max Blaze Burner" = 8
 	#Should Boilers apply heat?
-	Boiler = true
+	Boiler = false
 	#The amount of MC UNITS to increase per heat level (max heat level is 18) (per block)
 	# Default: 0.004768717215069146
 	# Range: 0.0 ~ 1.0

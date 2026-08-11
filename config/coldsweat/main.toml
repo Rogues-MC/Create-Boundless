@@ -14,12 +14,12 @@
 	# Defines the minimum habitable temperature
 	# Default: 0.4
 	# Range: -Infinity ~ Infinity
-	"Minimum Habitable Temperature" = 0.4
+	"Minimum Habitable Temperature" = 0.17777777777777778
 	#─────────────────────────────────────────────────────────────────────────
 	# Defines the maximum habitable temperature
 	# Default: 1.511111111111111
 	# Range: -Infinity ~ Infinity
-	"Maximum Habitable Temperature" = 1.511111111111111
+	"Maximum Habitable Temperature" = 1.8444444444444446
 	#─────────────────────────────────────────────────────────────────────────
 	# Rate at which the player's body temperature changes (default: 1.0 (100%))
 	# Default: 1.0

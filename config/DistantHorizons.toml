@@ -204,10 +204,26 @@ _version = 4
 			# to cause frame stuttering and/or other issues.
 			logGarbageCollectorWarning = false
 			#
-			# If enabled, a chat message will be displayed if the garbage 
+			# If enabled, a chat message will be displayed in chat if the garbage 
 			# collector Java is currently using is known 
 			# to cause frame stuttering and/or other issues.
 			showGarbageCollectorWarning = false
+			#
+			# If enabled, a chat message will be displayed when DH is using 
+			# a deprecated renderer.
+			showDeprecatedRendererWarningOnStartup = true
+			#
+			# If enabled, a message will be logged if explicit garbage collection 
+			# is disabled. 
+			# This is known to cause out-of-memory issues 
+			# and is better solved with a concurrent garbage collector.
+			logExplicitGcDisabledWarning = true
+			#
+			# If enabled, a message will be displayed in chat if explicit garbage collection 
+			# is disabled. 
+			# This is known to cause out-of-memory issues 
+			# and is better solved with a concurrent garbage collector.
+			showExplicitGcDisabledWarning = true
 
 	[common.worldGenerator]
 		#
@@ -698,7 +714,7 @@ _version = 4
 				# Note: this is a best effort number. 
 				# The actual render distance may be above or below this number 
 				# depending on your other graphic settings.
-				lodChunkRenderDistanceRadius = 128
+				lodChunkRenderDistanceRadius = 256
 				#
 				# How should the sides and bottom of grass block LODs render? 
 				# 
@@ -747,6 +763,22 @@ _version = 4
 				# Enabling helps free-cam mods render correctly. 
 				# Disabling helps multi-camera mods render correctly (ie Immersive Portals or camera mods).
 				useCameraPositionForQualityDropOff = true
+				#
+				# If true LOD quality will increase when the camera is zoomed in, 
+				# IE when using a spyglass or zoom mod. 
+				# 
+				# Only LODs visible through the camera view are affected. 
+				# 
+				# When zoomed in LODs will load to the same detail level 
+				# they would have if you were close to them.
+				increaseQualityWhenZoomedIn = true
+				#
+				# How many detail levels zooming in can increase LOD quality by. 
+				# Higher numbers allow stronger zooms to render crisper terrain, 
+				# but will increase memory and GPU usage while zoomed in. 
+				#  
+				# A vanilla spyglass needs 4 detail levels to reach its full quality.
+				maxZoomQualityIncrease = 4
 
 			[client.advanced.graphics.fog]
 				#
@@ -863,6 +895,62 @@ _version = 4
 					# 0.0: Fog end with no offset.
 					# 1.0: Fog end with offset of the entire world's height. (Include depth)
 					heightFogEnd = "0.6"
+
+			[client.advanced.graphics.texture]
+				#
+				# If true nearby and zoomed-in LODs will render with their block's 
+				# actual texture instead of a single flat color. 
+				#  
+				# Only applies to high detail LODs where the texture is actually visible, 
+				# distant LODs always use flat colors. 
+				# Some shader packs nay not have an affect.
+				enableTexturedLods = true
+				#
+				# The highest detail level number that can render with block textures. 
+				# At higher detail levels each LOD covers multiple blocks, 
+				# which can essentially make textures smaller than a pixel and therefore invisible. 
+				#  
+				# Larger numbers texture more distant LODs 
+				# but increase memory usage.
+				maxTexturedLodDetailLevel = 2
+				#
+				# A comma separated list of block resource locations 
+				# that DH won't render textures on. 
+				# Partial matches/incomplete resource locations will also match. 
+				# 
+				# Example: "minecraft:grass_block,nylium" 
+				# 
+				# Changes require a restart.
+				blocksDontRenderTextureCsv = "minecraft:bamboo"
+				#
+				# A comma separated list of block resource locations 
+				# that DH will render their sides using the bottom texture. 
+				# Partial matches/incomplete resource locations will also match. 
+				# 
+				# Example: "minecraft:grass_block,nylium" 
+				# 
+				# Changes require a restart.
+				blocksDontUseSideTextureCsv = "grass_block,mycelium,nylium,dirt_path"
+				#
+				# A comma separated list of tag names 
+				# that DH will render their sides using the bottom texture. 
+				# 
+				# Example: "grass_blocks,nylium" 
+				# 
+				# Changes require a restart.
+				blockTagsDontUseSideTextureCsv = "grass_blocks,nylium"
+				#
+				# A comma separated list of block resource locations 
+				# that DH will use rasterization to determine 
+				# the face textures.
+				# 
+				# Can be used to fix issues with mods/blocks where
+				# a side uses just part of a modeled block's texture. 
+				# 
+				# Example: "minecraft:beacon" 
+				# 
+				# Changes require a restart.
+				blocksAlwaysRasterizeTextureCsv = "minecraft:beacon"
 
 		[client.advanced.multiplayer]
 			#

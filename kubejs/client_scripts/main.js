@@ -2,14 +2,11 @@
 console.info('[Create: Boundless KubeJS] Hello world! Loading client script...')
 
 KubeJEIEvents.subtypes(event => {
-  // event.hide('stellaris:steel_ingot')
   event.hide('tfmg:steel_ingot')
   event.hide('createbigcannons:steel_ingot')
   event.hide('mekanism:ingot_steel')
-  // event.hide('stellaris:steel_nugget')
   event.hide('tfmg:steel_nugget')
   event.hide('mekanism:nugget_steel')
-  // event.hide('stellaris:steel_block')
   event.hide('tfmg:steel_block')
   event.hide('createbigcannons:steel_block')
   event.hide('mekanism:block_steel')

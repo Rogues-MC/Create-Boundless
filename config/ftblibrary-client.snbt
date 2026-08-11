@@ -4,7 +4,12 @@
 	colorselector: {
 		# Colors recently selected in the color selector
 		# Default: []
-		recents: [I;-16622849]
+		recents: [I;
+			-16622849
+			-16686851
+			-191496
+			-15314689
+		]
 	}
 	sidebar: {
 		buttons: {

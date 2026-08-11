@@ -38,7 +38,7 @@
 	#Factor that multiplies the rate at which trees grow. Use at own risk
 	# Default: 0.5
 	# Range: 0.0 ~ 16.0
-	treeGrowthMultiplier = 0.5
+	treeGrowthMultiplier = 2.0
 	#Factor that multiplies the wood returned from harvesting a tree.  You cheat.
 	# Default: 1.0
 	# Range: 0.0 ~ 128.0
@@ -46,7 +46,7 @@
 	#Maximum harvesting hardness that can be calculated. Regardless of tree thickness.
 	# Default: 20.0
 	# Range: 1.0 ~ 200.0
-	maxTreeHardness = 20.0
+	maxTreeHardness = 60.0
 	#A multiplier of tree hardness. Higher values make trees slower to chop, lower values makes them faster to chop.
 	# Default: 1.0
 	# Range: 0.0078125 ~ 32.0
@@ -75,7 +75,7 @@
 	#The amount of growth pulses to send when bone meal is applied to a tree. Warning: setting values higher than 64 is not recommended other than for testing purposes. 
 	# Default: 1
 	# Range: 1 ~ 512
-	boneMealGrowthPulses = 1
+	boneMealGrowthPulses = 16
 
 #Interaction Settings
 [interaction]

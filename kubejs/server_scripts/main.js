@@ -19,15 +19,12 @@ ServerEvents.recipes(event => {
   event.replaceInput({}, '#forge:coals', '#c:coals')
   event.replaceOutput({}, '#neoforge:coals', '#c:coals')
   event.replaceInput({}, '#forge:dusts/coal', '#c:dusts/coal')
-  event.replaceOutput({}, '#neoforge:dusts/coal', '#c:dusts/coal')
   event.replaceInput({}, '#forge:dusts/saltpeter', '#c:dusts/saltpeter')
   event.replaceOutput({}, '#neoforge:dusts/saltpeter', '#c:dusts/saltpeter')
   event.replaceInput({}, '#forge:dusts/sulfur', '#c:dusts/sulfur')
-  event.replaceOutput({}, '#neoforge:dusts/sulfur', '#c:dusts/sulfur')
   event.replaceInput({}, '#forge:ingots/graphite', '#c:ingot/graphite')
   event.replaceOutput({}, '#neoforge:ingots/graphite', '#c:ingot/graphite')
   event.replaceInput({}, '#forge:enchanting_fuels', '#c:enchanting_fuels')
-  event.replaceOutput({}, '#neoforge:enchanting_fuels', '#c:enchanting_fuels')
 
   event.replaceInput({}, 'chipped:saw', '#c:tools/saws')
   event.replaceInput({}, '#createmechanisms:sawing_tools', '#c:tools/saws')
@@ -87,8 +84,10 @@ ServerEvents.recipes(event => {
 
   event.shapeless('createbigcannons:bronze_ingot', ['mekanism:ingot_bronze'])
   event.shapeless('mekanism:ingot_bronze', ['createbigcannons:bronze_ingot'])
+  event.shapeless(Item.of('minecraft:string', 4), [Ingredient.of('#minecraft:wool'), 'minecraft:shears']).damageIngredient('minecraft:shears', 1)
 
   event.recipes.create.pressing('kubejs:bronze_sheet', Ingredient.of('#c:ingots/bronze'))
+  event.recipes.create.mixing('minecraft:leather', ['minecraft:rotten_flesh', Fluid.of('minecraft:water', 125)]).heated()
 
   event.remove({input: Ingredient.of('#immersiveengineering:tools/hammers'), output: Ingredient.of('#c:plates')})
   event.remove({id: 'chipped:saw'})

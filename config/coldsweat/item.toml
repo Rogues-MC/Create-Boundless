@@ -112,6 +112,7 @@
 	    ["cold_sweat:goat_fur", 2, 0],
 	    ["createmechanisms:heat_mechanism", 3, 0],
 	    ["#minecraft:wool", 1.5, 0],
+	    ["minecraft:feather", 0.25, 0.25],
 	    ["minecraft:rabbit_hide", 0, 1.5]
 	]
 	#─────────────────────────────────────────────────────────────────────────//v
@@ -161,11 +162,14 @@
 	    ["ars_nouveau:arcanist_robes", 8, 8],
 	    ["ars_nouveau:arcanist_leggings", 7, 7],
 	    ["ars_nouveau:arcanist_boots", 4, 4],
-	    ["immersive_armors:robe_helmet", 4, 4],
-	    ["immersive_armors:robe_chestplate", 8, 8],
-	    ["immersive_armors:robe_leggings", 7, 7],
-	    ["immersive_armors:robe_boots", 4, 4],
-	    ["#irons_spellbooks:armors", 4, 4],
+	    ["northstar:iron_space_suit_boots", 20, 20],
+	    ["northstar:iron_space_suit_leggings", 20, 20],
+	    ["northstar:iron_space_suit_chestpiece", 20, 20],
+	    ["northstar:iron_space_suit_helmet", 20, 20],
+	    ["northstar:martian_steel_space_suit_boots", 25, 25],
+	    ["northstar:martian_steel_space_suit_leggings", 25, 25],
+	    ["northstar:martian_steel_space_suit_chestpiece", 25, 25],
+	    ["northstar:martian_steel_space_suit_helmet", 25, 25],
 	    ["cold_sweat:chameleon_helmet", 10, 0.0085, "adaptive"],
 	    ["cold_sweat:chameleon_chestplate", 14, 0.0085, "adaptive"],
 	    ["cold_sweat:chameleon_leggings", 12, 0.0085, "adaptive"],
@@ -175,7 +179,10 @@
 	# Defines the items that provide insulation when worn in a curio slot
 	# See Insulation Ingredients for formatting. This setting does not have a "fillSlots" option
 	# ⌄ 
-	"Insulating Curios" = []
+	"Insulating Curios" = [
+	    ["artifacts:strider_shoes", 0, 10],
+	    ["artifacts:snowshoes", 10, 0]
+	]
 	#─────────────────────────────────────────────────────────────────────────
 	# Defines how many insulation slots armor pieces have
 	# There are 4 modes for this setting:
@@ -282,7 +289,13 @@
 	# ⌄ 
 	"Item Temperatures" = [
 	    ["cold_sweat:filled_waterskin", 0.025, "hand,hotbar", "core", "{'cold_sweat:temperature':'0.1:'}", 999, true],
-	    ["cold_sweat:filled_waterskin", -0.025, "hand,hotbar", "core", "{'cold_sweat:temperature':':-0.1'}", 999, true]
+	    ["cold_sweat:filled_waterskin", -0.025, "hand,hotbar", "core", "{'cold_sweat:temperature':':-0.1'}", 999, true],
+	    ["minecraft:ice", -0.004, "hand", "world", "{}", 10],
+	    ["minecraft:packed_ice", -0.02, "hand", "world", "{}", 10],
+	    ["minecraft:lava_bucket", 0.5, "hand", "world", "{}", 10],
+	    ["#chipped:magma_block", 0.004, "hand", "world", "{}", 10],
+	    ["#chipped:torch", 0.001, "hand", "world", "{}", 10],
+	    ["minecraft:soul_torch", -0.001, "hand", "world", "{}", 10]
 	]
 
 ["Item Functions"]
@@ -304,5 +317,5 @@
 # Disabling these settings will not disable the heat/cold protection set bonus
 # ⌄ 
 ["Create Backtank"]
-	"Heat Drains Backtank" = true
+	"Heat Drains Backtank" = false
 	"Cold Drains Backtank" = false
