@@ -1,0 +1,202 @@
+#─────────────────────────────────────────────────────────────────────────
+# Anywhere that uses entity IDs also supports:
+# • Tags (e.g. "#minecraft:skeletons")
+# • Comma-separated lists (e.g. "minecraft:zombie,#minecraft:skeletons")
+#     Applies the setting to all listed IDs. Can use tags, regular IDs, and negation interchangeably
+# • Negation (e.g. "!minecraft:evoker")
+#     Useful with lists/tags. Excludes the listed IDs from the setting
+#     i.e. "#minecraft:raiders,!minecraft:evoker" (all raid mobs EXCEPT evokers)
+# Settings with "//v" will list elements vertically. Removing "//v" will list elements in one line
+#─────────────────────────────────────────────────────────────────────────
+["Entity Temperature"]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# List of entities that will insulate the player when riding them
+	# A value of 0 provides no insulation; 1 provides full insulation
+	# └── Format: [["entity_id", coldResistance, heatResistance], [...], etc]
+	# ⌄ 
+	"Insulated Mounts" = []
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines temperature-emitting properties for entities
+	# ├── Format: [["entity_id", temperature, range, *units, *tempLimit], [...], etc]
+	# └── [* = optional]
+	# • temperature: The temperature emitted by the entity
+	# • range: The range of the effect, in blocks
+	# • units: (Optional) The units of the temperature value (MC, F, or C). Defaults to MC
+	# • *tempLimit: The maximum world temperature at which this entity temp will have any effect.
+	#   (Represents the minimum temp if the entity temp is negative)
+	# ⌄ 
+	"Entity Temperatures" = []
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines entities that are affected by temperature and the climates they can live in
+	# ├── Format: [["entity_id", minTemp, maxTemp, *rate, *units], [...], etc]
+	# └── [* = optional]
+	# • min_temp: The minimum livable temperature, as an offset to the minimum temperature for players
+	# • max_temp: The maximum livable temperature, as an offset to the maximum temperature for players
+	# • *rate: A multiplier to the rate at which the entity overheats or freezes, based on players' rate
+	# • *units: The units used for the min/max temperature values (MC, F, or C). Defaults to MC
+	# ⌄ 
+	"Entity Climate Settings" = [
+	    ["minecraft:chicken", 10, 10, 0.6, "F"],
+	    ["minecraft:pig", 0, 0, 0.5, "F"],
+	    ["minecraft:cow", 0, 20, 0.2, "F"],
+	    ["minecraft:mooshroom", 0, 20, 0.2, "F"],
+	    ["minecraft:sheep", -20, -10, 0.3, "F"],
+	    ["minecraft:goat", -40, -15, 0.4, "F"],
+	    ["minecraft:horse", -5, 10, 0.3, "F"],
+	    ["minecraft:donkey", -5, 10, 0.3, "F"],
+	    ["minecraft:mule", -5, 10, 0.3, "F"],
+	    ["minecraft:llama", -10, 0, 0.4, "F"]
+	]
+	#─────────────────────────────────────────────────────────────────────────
+	# Enables the temperature system for entities
+	# If disabled, entities will not be harmed by temperature
+	# ⌄ 
+	"Enable Entity Climates" = false
+	#─────────────────────────────────────────────────────────────────────────
+	# Enables more precise temperature calculations for entities
+	# This option might cause performance issues for large amounts of entities
+	# ⌄ 
+	"Use Advanced Entity Climates" = false
+
+["Fur Growth & Shedding"]
+	#─────────────────────────────────────────────────────────────────────────
+	# Defines how often a goat will try to grow its fur, the growth cooldown after shearing, and the chance of it succeeding
+	# └── Format: [interval, cooldown, chance]
+	# ⌄ 
+	"Goat Fur Growth Timings" = [1200, 2400, 0.2]
+	#─────────────────────────────────────────────────────────────────────────
+	# Defines how often a chameleon will try to shed its skin, the cooldown after shedding, and the chance of it succeeding
+	# Format: [interval, cooldown, chance]
+	# ⌄ 
+	"Chameleon Shedding Timings" = [400, 36000, 0.1]
+	#─────────────────────────────────────────────────────────────────────────
+	# If true, chameleons will automatically drop molt when ready to shed
+	# If false, chameleons will only drop molt when a player interacts with them
+	# ⌄ 
+	"Chameleons Shed Automatically" = false
+	#─────────────────────────────────────────────────────────────────────────
+	# The time limit for how long a chameleon can wait to be shed by a player
+	# Has no effect if 'Chameleons Shed Automatically' is enabled
+	# ⌄ 
+	# Default: 6000
+	# Range: > 0
+	"Chameleon Interact Time Limit" = 6000
+
+["Mob Spawning"]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines the biomes that Chameleons can spawn in
+	# └── Format: [["biome_id", weight], [...], etc]
+	# • biome_id: The ID of the biome, e.g. "minecraft:jungle"
+	# • weight: The likelihood for the entity to spawn compared to other entities, higher values mean more common spawns
+	# ⌄ 
+	"Chameleon Spawn Biomes" = [
+	    ["minecraft:bamboo_jungle", 8],
+	    ["minecraft:jungle", 8],
+	    ["minecraft:sparse_jungle", 6],
+	    ["minecraft:mangrove_swamp", 4],
+	    ["minecraft:savanna", 5],
+	    ["minecraft:savanna_plateau", 4],
+	    ["minecraft:windswept_savanna", 4],
+	    ["minecraft:desert", 3],
+	    ["biomesoplenty:dryland", 3],
+	    ["biomesoplenty:fungal_jungle", 7],
+	    ["biomesoplenty:jacaranda_glade", 5],
+	    ["biomesoplenty:lush_desert", 4],
+	    ["biomesoplenty:lush_savanna", 6],
+	    ["biomesoplenty:mediterranean_forest", 5],
+	    ["biomesoplenty:rainforest", 8],
+	    ["biomesoplenty:rocky_rainforest", 7],
+	    ["biomesoplenty:rocky_shrubland", 4],
+	    ["biomesoplenty:scrubland", 4],
+	    ["biomesoplenty:shrubland", 4],
+	    ["biomesoplenty:tropics", 8],
+	    ["biomeswevegone:araucaria_savanna", 5],
+	    ["biomeswevegone:baobab_savanna", 6],
+	    ["biomeswevegone:firecracker_chaparral", 4],
+	    ["biomeswevegone:fragment_jungle", 7],
+	    ["biomeswevegone:jacaranda_jungle", 8],
+	    ["biomeswevegone:mojave_desert", 3],
+	    ["biomeswevegone:tropical_rainforest", 8],
+	    ["biomeswevegone:white_mangrove_marshes", 4],
+	    ["biomeswevegone:windswept_desert", 3],
+	    ["regions_unexplored:bamboo_forest", 7],
+	    ["regions_unexplored:baobab_savanna", 6],
+	    ["regions_unexplored:dry_bushland", 4],
+	    ["regions_unexplored:eucalyptus_forest", 5],
+	    ["regions_unexplored:joshua_desert", 3],
+	    ["regions_unexplored:outback", 4],
+	    ["regions_unexplored:rainforest", 8],
+	    ["regions_unexplored:saguaro_desert", 3],
+	    ["regions_unexplored:shrubland", 4],
+	    ["regions_unexplored:sparse_rainforest", 6],
+	    ["regions_unexplored:tropics", 8],
+	    ["terralith:amethyst_rainforest", 7],
+	    ["terralith:brushland", 4],
+	    ["terralith:cloud_forest", 6],
+	    ["terralith:desert_oasis", 5],
+	    ["terralith:fractured_savanna", 5],
+	    ["terralith:hot_shrubland", 4],
+	    ["terralith:jungle_mountains", 7],
+	    ["terralith:lush_desert", 4],
+	    ["terralith:red_oasis", 5],
+	    ["terralith:rocky_jungle", 7],
+	    ["terralith:rocky_shrubland", 4],
+	    ["terralith:sandstone_valley", 3],
+	    ["terralith:savanna_slopes", 5],
+	    ["terralith:tropical_jungle", 8]
+	]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines the biomes that Chameleons can spawn in
+	# └── Format: [["biome_id", weight], [...], etc]
+	# • biome_id: The ID of the biome, e.g. "minecraft:jungle"
+	# • weight: The likelihood for the entity to spawn compared to other entities, higher values mean more common spawns
+	# ⌄ 
+	"Goat Spawn Biomes" = [
+	    ["minecraft:frozen_peaks", 8],
+	    ["minecraft:jagged_peaks", 8],
+	    ["minecraft:snowy_slopes", 8],
+	    ["minecraft:stony_peaks", 7],
+	    ["minecraft:windswept_gravelly_hills", 6],
+	    ["minecraft:windswept_hills", 5],
+	    ["minecraft:windswept_forest", 4],
+	    ["minecraft:grove", 5],
+	    ["minecraft:meadow", 3],
+	    ["biomesoplenty:crag", 7],
+	    ["biomesoplenty:jade_cliffs", 6],
+	    ["biomesoplenty:highland", 5],
+	    ["biomeswevegone:canadian_shield", 5],
+	    ["biomeswevegone:dacite_ridges", 5],
+	    ["biomeswevegone:eroded_borealis", 8],
+	    ["biomeswevegone:howling_peaks", 8],
+	    ["biomeswevegone:red_rock_peaks", 6],
+	    ["biomeswevegone:shattered_glacier", 7],
+	    ["biomeswevegone:sierra_badlands", 4],
+	    ["regions_unexplored:arid_mountains", 4],
+	    ["regions_unexplored:chalk_cliffs", 3],
+	    ["regions_unexplored:highland_fields", 6],
+	    ["regions_unexplored:icy_heights", 8],
+	    ["regions_unexplored:mountains", 8],
+	    ["regions_unexplored:pine_slopes", 6],
+	    ["regions_unexplored:spires", 6],
+	    ["regions_unexplored:towering_cliffs", 7],
+	    ["terralith:alpine_grove", 6],
+	    ["terralith:alpine_highlands", 7],
+	    ["terralith:arid_highlands", 4],
+	    ["terralith:forested_highlands", 5],
+	    ["terralith:highlands", 5],
+	    ["terralith:temperate_highlands", 5],
+	    ["terralith:emerald_peaks", 8],
+	    ["terralith:haze_mountain", 7],
+	    ["terralith:painted_mountains", 6],
+	    ["terralith:rocky_mountains", 8],
+	    ["terralith:scarlet_mountains", 7],
+	    ["terralith:volcanic_peaks", 4],
+	    ["terralith:basalt_cliffs", 5],
+	    ["terralith:frozen_cliffs", 8],
+	    ["terralith:glacial_chasm", 7],
+	    ["terralith:granite_cliffs", 7],
+	    ["terralith:stony_spires", 7],
+	    ["terralith:white_cliffs", 4],
+	    ["terralith:windswept_spires", 7],
+	    ["terralith:yosemite_cliffs", 7]
+	]

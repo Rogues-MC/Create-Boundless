@@ -1,0 +1,9 @@
+[
+    {
+        "identifier": "default_message",
+        "schedule": "on_first_join",
+        "type": "chat", "repeats": false,
+        "pack_intro": false, "link": "",
+        "text": "§6Thank you for playing Create: Boundless! This modpack works great in singleplayer, but if you have friends, this modpack is actually built for multiplayer!"
+    }
+]

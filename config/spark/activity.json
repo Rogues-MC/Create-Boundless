@@ -1,0 +1,259 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781634350429,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/npOEmEqWeq"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781634229882,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/eZo9CI4kde"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633935025,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/RdhAMNVRLA"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633800543,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/gBDnxSzCR0"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633696107,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/M4CkmAaKM8"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633694135,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/j1EKggb7b0"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633662740,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/LxE1lad4fB"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781633610335,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/okU3SaJly1"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781624466137,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Users\\bstah\\curseforge\\minecraft\\Instances\\Create Boundless (GitHub)\\config\\spark\\heap-2026-06-16_11.40.52.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781618441485,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Users\\bstah\\curseforge\\minecraft\\Instances\\Create Boundless (GitHub)\\config\\spark\\heap-2026-06-16_10.00.27.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781618378148,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/R97HxBWu3J"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781617063845,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/Y7S0iiMVH3"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781615462040,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/4gsLUapnPJ"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781584578467,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/mTm3Aq2wpQ"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781584414209,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/uneTTaiexz"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781583365674,
+    "type": "Heap dump summary",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/9G6MQRoKMb"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "BrotalityREAL",
+      "uniqueId": "c2766961-c6b5-4d91-90ca-0c52a42aab79"
+    },
+    "time": 1781580145311,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Users\\bstah\\curseforge\\minecraft\\Instances\\Create Boundless (GitHub)\\config\\spark\\heap-2026-06-15_23.21.54.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781315747353,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.55.42.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781315313632,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.48.26.hprof"
+    }
+  },
+  {
+    "user": {
+      "type": "other",
+      "name": "Server"
+    },
+    "time": 1781314978403,
+    "type": "Heap dump",
+    "data": {
+      "type": "file",
+      "value": "C:\\Multicraft\\data\\servers\\server2\\config\\spark\\heap-2026-06-12_21.42.54.hprof"
+    }
+  }
+]

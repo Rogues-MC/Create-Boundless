@@ -1,0 +1,696 @@
+#─────────────────────────────────────────────────────────────────────────
+# Anywhere that uses IDs, such as blocks, biomes, dimensions, and structures, also supports:
+# • Tags (e.g. "#minecraft:is_underground")
+# • Comma-separated lists (e.g. "minecraft:desert,#minecraft:is_badlands")
+#     Applies the setting to all listed IDs. Can use tags, regular IDs, and negation interchangeably
+# • Negation (e.g. "!minecraft:jungle_leaves")
+#     Useful with lists/tags. Excludes the listed IDs from the setting
+#     i.e. "#minecraft:leaves,!minecraft:jungle_leaves" (all leaves EXCEPT jungle leaves)
+# Settings with "//v" will list elements vertically. Removing "//v" will list elements in one line
+#─────────────────────────────────────────────────────────────────────────
+[Dimensions]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Applies an offset to the world's temperature across an entire dimension
+	# ├── Format: [["dimension_id", temperature, *units], [...], etc]
+	# └── [* = optional]
+	# • dimension_id: The ID of the dimension (e.g. "minecraft:the_nether")
+	# • temperature: The temperature offset to apply to the dimension
+	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
+	"Dimension Temperature Offsets" = [
+	    ["minecraft:the_end", -5, "f"]
+	]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines the temperature of a dimension, overriding biome and elevation temperature
+	# ├── Format: [["dimension_id", temperature, *units], [...], etc]
+	# └── [* = optional]
+	# • dimension_id: The ID of the dimension (e.g. "minecraft:the_nether")
+	# • temperature: The temperature of the dimension
+	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
+	"Dimension Temperatures" = []
+
+[Biomes]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Applies an offset to the temperature of a biome
+	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp], [...], etc]
+	# └── [* = optional]
+	# • biome_id: The ID of the biome (e.g. "minecraft:desert")
+	# • lowTemp: The temperature offset at midnight
+	# • highTemp: The temperature offset at noon
+	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
+	# • *waterTemp: Offsets the temperature of water in the biome
+	"Biome Temperature Offsets" = []
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Defines the temperature of a biome, overriding the biome's default temperature
+	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp], [...], etc]
+	# └── [* = optional]
+	# • biome_id: The ID of the biome (e.g. "minecraft:desert")
+	# • lowTemp: The temperature of the biome at midnight
+	# • highTemp: The temperature of the biome at noon
+	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
+	# • *waterTemp: The temperature of water in the biome
+	"Biome Temperatures" = [
+	    ["minecraft:bamboo_jungle", 76, 87, "F"],
+	    ["minecraft:basalt_deltas", 108, 122, "F"],
+	    ["minecraft:beach", 52, 84, "F"],
+	    ["minecraft:birch_forest", 47, 77, "F"],
+	    ["minecraft:cherry_grove", 42, 67, "F"],
+	    ["minecraft:cold_ocean", 38, 55, "F", -8],
+	    ["minecraft:crimson_forest", 96, 108, "F"],
+	    ["minecraft:dark_forest", 53, 80, "F"],
+	    ["minecraft:deep_cold_ocean", 36, 52, "F", -8],
+	    ["minecraft:deep_dark", 63, 63, "F"],
+	    ["minecraft:deep_frozen_ocean", 12, 27, "F", -10],
+	    ["minecraft:deep_lukewarm_ocean", 56, 69, "F", 4],
+	    ["minecraft:deep_ocean", 46, 62, "F", 0],
+	    ["minecraft:desert", 48, 115, "F"],
+	    ["minecraft:dripstone_caves", 55, 64, "F"],
+	    ["minecraft:end_barrens", 44, 44, "F"],
+	    ["minecraft:end_highlands", 50, 50, "F"],
+	    ["minecraft:end_midlands", 50, 50, "F"],
+	    ["minecraft:eroded_badlands", 58, 112, "F", -5],
+	    ["minecraft:flower_forest", 51, 76, "F"],
+	    ["minecraft:forest", 51, 76, "F"],
+	    ["minecraft:frozen_ocean", 16, 30, "F", -10],
+	    ["minecraft:frozen_peaks", 6, 26, "F"],
+	    ["minecraft:frozen_river", 15, 31, "F"],
+	    ["minecraft:grove", 10, 36, "F"],
+	    ["minecraft:ice_spikes", 17, 47, "F"],
+	    ["minecraft:jagged_peaks", 8, 28, "F"],
+	    ["minecraft:jungle", 76, 89, "F"],
+	    ["minecraft:lukewarm_ocean", 58, 72, "F", 4],
+	    ["minecraft:lush_caves", 39, 70, "F"],
+	    ["minecraft:mangrove_swamp", 56, 80, "F"],
+	    ["minecraft:meadow", 42, 67, "F"],
+	    ["minecraft:mushroom_fields", 61, 84, "F"],
+	    ["minecraft:nether_wastes", 100, 115, "F"],
+	    ["minecraft:ocean", 50, 66, "F", 0],
+	    ["minecraft:old_growth_birch_forest", 58, 72, "F"],
+	    ["minecraft:old_growth_pine_taiga", 48, 62, "F"],
+	    ["minecraft:old_growth_spruce_taiga", 48, 62, "F"],
+	    ["minecraft:pale_garden", 48, 68, "F"],
+	    ["minecraft:plains", 52, 84, "F"],
+	    ["minecraft:river", 48, 70, "F", 0],
+	    ["minecraft:savanna", 70, 95, "F"],
+	    ["minecraft:savanna_plateau", 76, 98, "F"],
+	    ["minecraft:small_end_islands", 50, 50, "F"],
+	    ["minecraft:snowy_beach", 8, 30, "F"],
+	    ["minecraft:snowy_plains", 8, 30, "F"],
+	    ["minecraft:snowy_slopes", 24, 32, "F"],
+	    ["minecraft:snowy_taiga", 8, 30, "F"],
+	    ["minecraft:soul_sand_valley", 88, 100, "F"],
+	    ["minecraft:sparse_jungle", 62, 87, "F"],
+	    ["minecraft:stony_peaks", 38, 68, "F"],
+	    ["minecraft:stony_shore", 50, 64, "F"],
+	    ["minecraft:sulfur_caves", 76, 86, "F"],
+	    ["minecraft:sunflower_plains", 52, 84, "F"],
+	    ["minecraft:swamp", 72, 84, "F", 5],
+	    ["minecraft:taiga", 44, 62, "F"],
+	    ["minecraft:the_end", 50, 50, "F"],
+	    ["minecraft:the_void", 40, 40, "F"],
+	    ["minecraft:warm_ocean", 68, 80, "F", 8],
+	    ["minecraft:warped_forest", 82, 94, "F"],
+	    ["minecraft:windswept_forest", 48, 66, "F"],
+	    ["minecraft:windswept_gravelly_hills", 24, 58, "F"],
+	    ["minecraft:windswept_hills", 24, 58, "F"],
+	    ["minecraft:windswept_savanna", 67, 90, "F"],
+	    ["minecraft:wooded_badlands", 60, 102, "F", -5],
+	    ["biomesoplenty:auroral_garden", 18, 38, "F"],
+	    ["biomesoplenty:bayou", 69, 83, "F", 5],
+	    ["biomesoplenty:bog", 41, 58, "F"],
+	    ["biomesoplenty:cold_desert", 0, 40, "F"],
+	    ["biomesoplenty:coniferous_forest", 44, 67, "F"],
+	    ["biomesoplenty:crag", 45, 68, "F"],
+	    ["biomesoplenty:crystalline_chasm", 38, 38, "F"],
+	    ["biomesoplenty:dead_forest", 50, 72, "F"],
+	    ["biomesoplenty:dryland", 67, 97, "F"],
+	    ["biomesoplenty:dune_beach", 62, 80, "F", -2],
+	    ["biomesoplenty:end_corruption", 58, 58, "F"],
+	    ["biomesoplenty:end_reef", 54, 54, "F"],
+	    ["biomesoplenty:end_wilds", 48, 48, "F"],
+	    ["biomesoplenty:erupting_inferno", 112, 122, "F"],
+	    ["biomesoplenty:field", 58, 85, "F"],
+	    ["biomesoplenty:fir_clearing", 49, 68, "F"],
+	    ["biomesoplenty:floodplain", 68, 89, "F"],
+	    ["biomesoplenty:forested_field", 58, 78, "F"],
+	    ["biomesoplenty:fungal_jungle", 73, 86, "F"],
+	    ["biomesoplenty:glowing_grotto", 58, 66, "F"],
+	    ["biomesoplenty:grassland", 54, 79, "F"],
+	    ["biomesoplenty:gravel_beach", 50, 70, "F", -2],
+	    ["biomesoplenty:highland", 57, 70, "F"],
+	    ["biomesoplenty:hot_springs", 40, 62, "F", 20],
+	    ["biomesoplenty:jacaranda_glade", 62, 82, "F"],
+	    ["biomesoplenty:jade_cliffs", 57, 70, "F"],
+	    ["biomesoplenty:lavender_field", 54, 80, "F"],
+	    ["biomesoplenty:lush_desert", 72, 94, "F"],
+	    ["biomesoplenty:lush_savanna", 69, 91, "F"],
+	    ["biomesoplenty:maple_woods", 58, 68, "F"],
+	    ["biomesoplenty:marsh", 70, 84, "F", 5],
+	    ["biomesoplenty:mediterranean_forest", 64, 78, "F"],
+	    ["biomesoplenty:moor", 43, 63, "F", 2],
+	    ["biomesoplenty:muskeg", 18, 38, "F", 1],
+	    ["biomesoplenty:mystic_grove", 65, 72, "F"],
+	    ["biomesoplenty:old_growth_dead_forest", 48, 68, "F"],
+	    ["biomesoplenty:old_growth_woodland", 52, 74, "F"],
+	    ["biomesoplenty:ominous_woods", 52, 70, "F"],
+	    ["biomesoplenty:orchard", 58, 78, "F"],
+	    ["biomesoplenty:origin_valley", 65, 80, "F"],
+	    ["biomesoplenty:overgrown_greens", 62, 80, "F"],
+	    ["biomesoplenty:pasture", 52, 80, "F"],
+	    ["biomesoplenty:prairie", 66, 82, "F"],
+	    ["biomesoplenty:pumpkin_patch", 48, 64, "F"],
+	    ["biomesoplenty:rainforest", 73, 86, "F"],
+	    ["biomesoplenty:redwood_forest", 50, 72, "F"],
+	    ["biomesoplenty:rocky_rainforest", 73, 86, "F"],
+	    ["biomesoplenty:rocky_shrubland", 54, 82, "F"],
+	    ["biomesoplenty:scrubland", 60, 88, "F"],
+	    ["biomesoplenty:seasonal_forest", 48, 64, "F"],
+	    ["biomesoplenty:shrubland", 56, 84, "F"],
+	    ["biomesoplenty:snowblossom_grove", 30, 50, "F"],
+	    ["biomesoplenty:snowy_coniferous_forest", 16, 38, "F"],
+	    ["biomesoplenty:snowy_fir_clearing", 18, 40, "F"],
+	    ["biomesoplenty:snowy_maple_woods", 32, 48, "F"],
+	    ["biomesoplenty:spider_nest", 75, 75, "F"],
+	    ["biomesoplenty:tropics", 75, 88, "F", 5],
+	    ["biomesoplenty:tundra", 8, 30, "F"],
+	    ["biomesoplenty:undergrowth", 52, 72, "F"],
+	    ["biomesoplenty:visceral_heap", 101, 112, "F"],
+	    ["biomesoplenty:volcanic_plains", 82, 95, "F"],
+	    ["biomesoplenty:volcano", 90, 116, "F"],
+	    ["biomesoplenty:wasteland", 60, 102, "F", -5],
+	    ["biomesoplenty:wasteland_steppe", 58, 94, "F", -4],
+	    ["biomesoplenty:wetland", 60, 78, "F", 3],
+	    ["biomesoplenty:wintry_origin_valley", 22, 42, "F"],
+	    ["biomesoplenty:withered_abyss", 90, 100, "F"],
+	    ["biomesoplenty:woodland", 54, 77, "F"],
+	    ["biomeswevegone:amaranth_grassland", 58, 84, "F"],
+	    ["biomeswevegone:araucaria_savanna", 68, 94, "F"],
+	    ["biomeswevegone:aspen_boreal", 34, 58, "F"],
+	    ["biomeswevegone:atacama_outback", 54, 112, "F", -5],
+	    ["biomeswevegone:baobab_savanna", 68, 95, "F"],
+	    ["biomeswevegone:basalt_barrera", 72, 100, "F", -3],
+	    ["biomeswevegone:bayou", 69, 83, "F", 5],
+	    ["biomeswevegone:black_forest", 47, 70, "F"],
+	    ["biomeswevegone:canadian_shield", 30, 54, "F"],
+	    ["biomeswevegone:cika_woods", 42, 66, "F"],
+	    ["biomeswevegone:coconino_meadow", 48, 78, "F"],
+	    ["biomeswevegone:coniferous_forest", 36, 60, "F"],
+	    ["biomeswevegone:crag_gardens", 43, 68, "F"],
+	    ["biomeswevegone:crimson_tundra", 18, 38, "F"],
+	    ["biomeswevegone:cypress_swamplands", 69, 83, "F", 5],
+	    ["biomeswevegone:cypress_wetlands", 66, 81, "F", 4],
+	    ["biomeswevegone:dacite_ridges", 34, 58, "F"],
+	    ["biomeswevegone:dacite_shore", 42, 62, "F", -2],
+	    ["biomeswevegone:dead_sea", 70, 88, "F", 6],
+	    ["biomeswevegone:ebony_woods", 62, 80, "F"],
+	    ["biomeswevegone:enchanted_tangle", 61, 78, "F"],
+	    ["biomeswevegone:eroded_borealis", 24, 48, "F"],
+	    ["biomeswevegone:firecracker_chaparral", 65, 95, "F"],
+	    ["biomeswevegone:forgotten_forest", 48, 70, "F"],
+	    ["biomeswevegone:fragment_jungle", 73, 88, "F", 4],
+	    ["biomeswevegone:frosted_coniferous_forest", 16, 38, "F"],
+	    ["biomeswevegone:frosted_taiga", 12, 34, "F"],
+	    ["biomeswevegone:howling_peaks", 8, 30, "F"],
+	    ["biomeswevegone:ironwood_gour", 48, 70, "F"],
+	    ["biomeswevegone:jacaranda_jungle", 73, 87, "F", 4],
+	    ["biomeswevegone:lush_stacks", 68, 82, "F", 6],
+	    ["biomeswevegone:maple_taiga", 38, 62, "F"],
+	    ["biomeswevegone:mojave_desert", 52, 114, "F", -5],
+	    ["biomeswevegone:orchard", 54, 80, "F"],
+	    ["biomeswevegone:overgrowth_woodlands", 58, 80, "F"],
+	    ["biomeswevegone:pale_bog", 46, 64, "F", 2],
+	    ["biomeswevegone:prairie", 56, 84, "F"],
+	    ["biomeswevegone:pumpkin_valley", 50, 74, "F"],
+	    ["biomeswevegone:rainbow_beach", 62, 82, "F", -1],
+	    ["biomeswevegone:red_rock_peaks", 48, 90, "F", -4],
+	    ["biomeswevegone:red_rock_valley", 58, 100, "F", -4],
+	    ["biomeswevegone:redwood_thicket", 52, 76, "F"],
+	    ["biomeswevegone:rose_fields", 54, 80, "F"],
+	    ["biomeswevegone:rugged_badlands", 54, 108, "F", -5],
+	    ["biomeswevegone:sakura_grove", 50, 74, "F"],
+	    ["biomeswevegone:shattered_glacier", 0, 24, "F", -10],
+	    ["biomeswevegone:sierra_badlands", 54, 104, "F", -5],
+	    ["biomeswevegone:skyris_vale", 55, 76, "F"],
+	    ["biomeswevegone:temperate_grove", 50, 75, "F"],
+	    ["biomeswevegone:tropical_rainforest", 74, 88, "F", 5],
+	    ["biomeswevegone:weeping_witch_forest", 50, 70, "F"],
+	    ["biomeswevegone:white_mangrove_marshes", 70, 84, "F", 5],
+	    ["biomeswevegone:windswept_desert", 50, 110, "F", -5],
+	    ["biomeswevegone:zelkova_forest", 52, 76, "F"],
+	    ["regions_unexplored:ancient_delta", 70, 84, "F", 5],
+	    ["regions_unexplored:arid_mountains", 60, 105, "F", -5],
+	    ["regions_unexplored:ashen_woodland", 70, 90, "F"],
+	    ["regions_unexplored:autumnal_maple_forest", 60, 85, "F"],
+	    ["regions_unexplored:bamboo_forest", 76, 87, "F"],
+	    ["regions_unexplored:baobab_savanna", 70, 95, "F"],
+	    ["regions_unexplored:barley_fields", 66, 82, "F"],
+	    ["regions_unexplored:bayou", 67, 78, "F"],
+	    ["regions_unexplored:bioshroom_caves", 62, 62, "F"],
+	    ["regions_unexplored:blackstone_basin", 104, 104, "F"],
+	    ["regions_unexplored:blackwood_taiga", 48, 68, "F"],
+	    ["regions_unexplored:boreal_taiga", 48, 68, "F"],
+	    ["regions_unexplored:chalk_cliffs", 50, 76, "F"],
+	    ["regions_unexplored:clover_plains", 65, 85, "F"],
+	    ["regions_unexplored:cold_boreal_taiga", 40, 59, "F"],
+	    ["regions_unexplored:cold_deciduous_forest", 43, 62, "F"],
+	    ["regions_unexplored:cold_river", 45, 60, "F"],
+	    ["regions_unexplored:deciduous_forest", 58, 82, "F"],
+	    ["regions_unexplored:dry_bushland", 72, 89, "F"],
+	    ["regions_unexplored:eucalyptus_forest", 69, 86, "F"],
+	    ["regions_unexplored:fen", 58, 79, "F"],
+	    ["regions_unexplored:flower_fields", 58, 85, "F"],
+	    ["regions_unexplored:frozen_pine_taiga", 20, 42, "F"],
+	    ["regions_unexplored:frozen_tundra", 16, 36, "F"],
+	    ["regions_unexplored:fungal_fen", 60, 82, "F"],
+	    ["regions_unexplored:glistering_meadow", 52, 78, "F"],
+	    ["regions_unexplored:golden_boreal_taiga", 48, 68, "F"],
+	    ["regions_unexplored:grassland", 66, 86, "F"],
+	    ["regions_unexplored:grassy_beach", 67, 80, "F"],
+	    ["regions_unexplored:gravel_beach", 62, 80, "F"],
+	    ["regions_unexplored:highland_fields", 60, 78, "F"],
+	    ["regions_unexplored:hyacinth_deeps", 60, 78, "F"],
+	    ["regions_unexplored:icy_heights", 30, 52, "F"],
+	    ["regions_unexplored:infernal_holt", 96, 108, "F"],
+	    ["regions_unexplored:inferno", 112, 122, "F"],
+	    ["regions_unexplored:joshua_desert", 72, 92, "F"],
+	    ["regions_unexplored:magnolia_woodland", 66, 86, "F"],
+	    ["regions_unexplored:maple_forest", 62, 82, "F"],
+	    ["regions_unexplored:marsh", 72, 88, "F"],
+	    ["regions_unexplored:mauve_hills", 65, 85, "F"],
+	    ["regions_unexplored:mountains", 42, 68, "F"],
+	    ["regions_unexplored:muddy_river", 65, 85, "F"],
+	    ["regions_unexplored:mycotoxic_undergrowth", 72, 84, "F"],
+	    ["regions_unexplored:old_growth_bayou", 74, 86, "F"],
+	    ["regions_unexplored:old_growth_boreal_taiga", 42, 62, "F"],
+	    ["regions_unexplored:old_growth_forest", 50, 72, "F"],
+	    ["regions_unexplored:old_growth_golden_boreal_taiga", 43, 64, "F"],
+	    ["regions_unexplored:orchard", 62, 85, "F"],
+	    ["regions_unexplored:outback", 62, 97, "F"],
+	    ["regions_unexplored:pine_slopes", 53, 74, "F"],
+	    ["regions_unexplored:pine_taiga", 47, 73, "F"],
+	    ["regions_unexplored:poppy_fields", 64, 84, "F"],
+	    ["regions_unexplored:prairie", 66, 82, "F"],
+	    ["regions_unexplored:prismachasm", 75, 75, "F"],
+	    ["regions_unexplored:pumpkin_fields", 60, 80, "F"],
+	    ["regions_unexplored:rainforest", 73, 89, "F"],
+	    ["regions_unexplored:redstone_abyss", 78, 78, "F"],
+	    ["regions_unexplored:redstone_caves", 74, 74, "F"],
+	    ["regions_unexplored:redwoods", 60, 80, "F"],
+	    ["regions_unexplored:rocky_meadow", 65, 85, "F"],
+	    ["regions_unexplored:rocky_reef", 62, 78, "F", 4],
+	    ["regions_unexplored:saguaro_desert", 58, 112, "F", -5],
+	    ["regions_unexplored:scorching_caves", 90, 90, "F"],
+	    ["regions_unexplored:shrubland", 64, 86, "F"],
+	    ["regions_unexplored:silver_birch_forest", 65, 85, "F"],
+	    ["regions_unexplored:sparse_rainforest", 73, 89, "F"],
+	    ["regions_unexplored:sparse_redwoods", 54, 78, "F"],
+	    ["regions_unexplored:spires", 18, 44, "F"],
+	    ["regions_unexplored:steppe", 72, 89, "F"],
+	    ["regions_unexplored:temperate_grove", 65, 85, "F"],
+	    ["regions_unexplored:towering_cliffs", 44, 70, "F"],
+	    ["regions_unexplored:tropical_river", 74, 85, "F"],
+	    ["regions_unexplored:tropics", 74, 87, "F"],
+	    ["regions_unexplored:tundra", 18, 38, "F"],
+	    ["regions_unexplored:willow_forest", 63, 82, "F"],
+	    ["regions_unexplored:windswept_maple_forest", 44, 66, "F"],
+	    ["regions_unexplored:wisteria_grove", 58, 80, "F"],
+	    ["terralith:alpha_islands_winter", 18, 38, "F"],
+	    ["terralith:alpine_grove", 28, 52, "F"],
+	    ["terralith:alpine_highlands", 22, 48, "F"],
+	    ["terralith:amethyst_canyon", 55, 90, "F"],
+	    ["terralith:amethyst_rainforest", 72, 86, "F", 4],
+	    ["terralith:ancient_sands", 52, 112, "F", -5],
+	    ["terralith:arid_highlands", 58, 98, "F", -4],
+	    ["terralith:ashen_savanna", 68, 94, "F"],
+	    ["terralith:basalt_cliffs", 46, 72, "F"],
+	    ["terralith:birch_taiga", 38, 62, "F"],
+	    ["terralith:blooming_plateau", 50, 76, "F"],
+	    ["terralith:blooming_valley", 54, 80, "F"],
+	    ["terralith:brushland", 58, 88, "F"],
+	    ["terralith:bryce_canyon", 52, 108, "F", -5],
+	    ["terralith:caldera", 70, 96, "F"],
+	    ["terralith:cave/andesite_caves", 55, 63, "F"],
+	    ["terralith:cave/deep_caves", 58, 62, "F"],
+	    ["terralith:cave/diorite_caves", 54, 62, "F"],
+	    ["terralith:cave/frostfire_caves", 44, 54, "F"],
+	    ["terralith:cave/fungal_caves", 60, 68, "F"],
+	    ["terralith:cave/granite_caves", 56, 64, "F"],
+	    ["terralith:cave/infested_caves", 62, 66, "F"],
+	    ["terralith:cave/mantle_caves", 90, 100, "F"],
+	    ["terralith:cave/thermal_caves", 78, 90, "F"],
+	    ["terralith:cave/tuff_caves", 55, 63, "F"],
+	    ["terralith:cave/underground_jungle", 68, 78, "F"],
+	    ["terralith:cloud_forest", 54, 72, "F"],
+	    ["terralith:cold_shrubland", 28, 54, "F"],
+	    ["terralith:deep_warm_ocean", 66, 78, "F", 8],
+	    ["terralith:desert_canyon", 50, 110, "F", -5],
+	    ["terralith:desert_oasis", 65, 94, "F", 6],
+	    ["terralith:desert_spires", 52, 112, "F", -5],
+	    ["terralith:emerald_peaks", 36, 60, "F"],
+	    ["terralith:forested_highlands", 42, 68, "F"],
+	    ["terralith:fractured_savanna", 65, 92, "F"],
+	    ["terralith:frozen_cliffs", 6, 28, "F"],
+	    ["terralith:glacial_chasm", -2, 22, "F", -10],
+	    ["terralith:granite_cliffs", 40, 68, "F"],
+	    ["terralith:gravel_beach", 50, 68, "F", -2],
+	    ["terralith:gravel_desert", 48, 105, "F", -5],
+	    ["terralith:haze_mountain", 38, 64, "F"],
+	    ["terralith:highlands", 48, 72, "F"],
+	    ["terralith:hot_shrubland", 67, 98, "F"],
+	    ["terralith:ice_marsh", 18, 34, "F", -6],
+	    ["terralith:jungle_mountains", 60, 80, "F", 3],
+	    ["terralith:lavender_forest", 50, 74, "F"],
+	    ["terralith:lavender_valley", 55, 80, "F"],
+	    ["terralith:lush_desert", 65, 95, "F", -2],
+	    ["terralith:lush_valley", 58, 82, "F"],
+	    ["terralith:mirage_isles", 65, 84, "F", 5],
+	    ["terralith:moonlight_grove", 54, 72, "F"],
+	    ["terralith:moonlight_valley", 58, 76, "F"],
+	    ["terralith:orchid_swamp", 70, 84, "F", 5],
+	    ["terralith:painted_mountains", 45, 82, "F", -3],
+	    ["terralith:red_oasis", 67, 96, "F", 6],
+	    ["terralith:rocky_jungle", 70, 86, "F", 4],
+	    ["terralith:rocky_mountains", 36, 64, "F"],
+	    ["terralith:rocky_shrubland", 54, 82, "F"],
+	    ["terralith:sakura_grove", 48, 72, "F"],
+	    ["terralith:sakura_valley", 52, 76, "F"],
+	    ["terralith:sandstone_valley", 58, 98, "F", -4],
+	    ["terralith:savanna_badlands", 66, 100, "F", -4],
+	    ["terralith:savanna_slopes", 62, 88, "F"],
+	    ["terralith:scarlet_mountains", 28, 58, "F"],
+	    ["terralith:shield", 34, 58, "F"],
+	    ["terralith:shield_clearing", 38, 62, "F"],
+	    ["terralith:shrubland", 56, 84, "F"],
+	    ["terralith:siberian_grove", 24, 46, "F"],
+	    ["terralith:siberian_taiga", 18, 40, "F"],
+	    ["terralith:skylands_autumn", 42, 66, "F"],
+	    ["terralith:skylands_spring", 48, 70, "F"],
+	    ["terralith:skylands_summer", 58, 80, "F"],
+	    ["terralith:skylands_winter", 14, 34, "F"],
+	    ["terralith:snowy_badlands", 16, 40, "F"],
+	    ["terralith:snowy_cherry_grove", 22, 44, "F"],
+	    ["terralith:snowy_maple_forest", 20, 42, "F"],
+	    ["terralith:snowy_shield", 12, 34, "F"],
+	    ["terralith:steppe", 58, 90, "F"],
+	    ["terralith:stony_spires", 30, 58, "F"],
+	    ["terralith:temperate_highlands", 44, 68, "F"],
+	    ["terralith:tropical_jungle", 74, 88, "F", 5],
+	    ["terralith:valley_clearing", 52, 78, "F"],
+	    ["terralith:volcanic_crater", 84, 108, "F"],
+	    ["terralith:volcanic_peaks", 70, 96, "F"],
+	    ["terralith:warm_river", 64, 78, "F", 5],
+	    ["terralith:warped_mesa", 60, 100, "F", -4],
+	    ["terralith:white_cliffs", 46, 70, "F"],
+	    ["terralith:white_mesa", 56, 96, "F", -4],
+	    ["terralith:windswept_spires", 26, 54, "F"],
+	    ["terralith:wintry_forest", 18, 40, "F"],
+	    ["terralith:wintry_lowlands", 24, 44, "F"],
+	    ["terralith:yellowstone", 36, 68, "F", 10],
+	    ["terralith:yosemite_cliffs", 38, 66, "F"],
+	    ["terralith:yosemite_lowlands", 48, 74, "F"],
+	    ["climaterivers:lukewarm_river", 56, 70, "F", 3],
+	    ["climaterivers:warm_river", 66, 79, "F", 5],
+	    ["yungscavebiomes:lost_caves", 54, 64, "F"],
+	    ["ars_nouveau:jar", 63, 63, "F"],
+	    ["ars_elemental:cascading_forest", 60, 76, "F", 4],
+	    ["ars_elemental:flashing_forest", 62, 80, "F"],
+	    ["ars_elemental:flourishing_forest", 60, 78, "F"],
+	    ["ars_elemental:vexing_caves", 58, 66, "F"],
+	    ["deeperdarker:deeplands", 54, 60, "F"],
+	    ["deeperdarker:echoing_forest", 56, 64, "F"],
+	    ["deeperdarker:overcast_columns", 58, 66, "F"],
+	    ["incendium:infernal_dunes", 105, 120, "F"],
+	    ["incendium:inverted_forest", 92, 105, "F"],
+	    ["incendium:quartz_flats", 96, 108, "F"],
+	    ["incendium:toxic_heap", 98, 110, "F"],
+	    ["incendium:volcanic_deltas", 112, 122, "F"],
+	    ["incendium:weeping_valley", 90, 102, "F"],
+	    ["incendium:withered_forest", 88, 100, "F"],
+	    ["northstar:lunar_cooled_lava_cave", 38, 54, "F"],
+	    ["northstar:lunar_crater_fields", -5, 90, "F"],
+	    ["northstar:lunar_glowstone_cavern", 54, 70, "F"],
+	    ["northstar:lunar_hills", 0, 82, "F"],
+	    ["northstar:lunar_ice_caves", 5, 24, "F"],
+	    ["northstar:lunar_plains", 5, 92, "F"],
+	    ["northstar:martian_crimsite_caverns", 24, 42, "F"],
+	    ["northstar:martian_dunes", 12, 72, "F"],
+	    ["northstar:martian_highlands", -5, 54, "F"],
+	    ["northstar:martian_magmatic_caves", 78, 96, "F"],
+	    ["northstar:martian_overgrown_caverns", 36, 56, "F"],
+	    ["northstar:martian_peaks", -15, 40, "F"],
+	    ["northstar:mercury_basins", 55, 122, "F"],
+	    ["northstar:mercury_hills", 38, 116, "F"],
+	    ["northstar:mercury_icy_caverns", 2, 24, "F"],
+	    ["northstar:mercury_magmatic_caverns", 106, 122, "F"],
+	    ["northstar:venus_fungal_caverns", 94, 106, "F"],
+	    ["northstar:venus_fungal_forest", 96, 108, "F"],
+	    ["northstar:venus_lava_caves", 116, 126, "F"],
+	    ["northstar:venus_sulfuric_caverns", 110, 122, "F"],
+	    ["northstar:venusian_plains", 106, 120, "F"],
+	    ["northstar:venusian_wastes", 110, 122, "F"],
+	    ["northstar:void", 20, 20, "F"]
+	]
+
+[Blocks]
+	#─────────────────────────────────────────────────────────────────────────//v
+	# Applies temperature-emitting properties to blocks
+	# ├── Format: [["block_id", temperature, range, *units, *maxEffect, *"predicates", *"{nbt}", *tempLimit], [...], etc]
+	# └── [* = optional]
+	# • block_id: The ID of the block (i.e. "minecraft:lava")
+	# • temperature: The temperature of the block, in Minecraft units
+	# • range: The radius of the block's temperature effect, in blocks
+	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
+	# • *maxEffect: The maximum cumulative temperature change this block can cause to a player (even with multiple blocks)
+	# • *predicates: The state that the block must have for the temperature to be applied (i.e. "lit=true").
+	#   (Define multiple predicates by separating them with commas [i.e. "lit=true,waterlogged=false"])
+	# • *nbt: The NBT data that the block must have for the temperature to be applied.
+	# • *tempLimit: The maximum world temperature at which this block temp will have any effect.
+	#   (Represents the minimum temp if the block temp is negative)
+	"Block Temperatures" = [
+	    ["cold_sweat:boiler", 15, 7, "f", 36, "lit=true", "", 212],
+	    ["cold_sweat:icebox", -15, 7, "f", 36, "frosted=true", "", 32],
+	    ["minecraft:lava", 30, 7, "f", 200, "", "", 1000, true],
+	    ["#minecraft:fire", 25, 7, "f", 50, "", "", 400],
+	    ["#minecraft:campfires", 25, 7, "f", 50, "lit=true", " ", 400],
+	    ["minecraft:magma_block", 20, 3, "f", 48],
+	    ["minecraft:lava_cauldron", 30, 7, "f", 200, "", "", 1000, true],
+	    ["minecraft:ice", -10, 4, "f", 24, "", "", 33],
+	    ["minecraft:packed_ice", -15, 4, "f", 48, "", "", 16],
+	    ["minecraft:blue_ice", -20, 4, "f", 64, "", "", 0],
+	    ["#minecraft:ice", -6, 4, "f", 27, "", "", 33],
+	    ["create:blaze_burner", 5, 3, "f", 30, "blaze=smouldering", "", 400],
+	    ["create:blaze_burner", 12, 4, "f", 30, "blaze=fading", "", 400],
+	    ["create:blaze_burner", 20, 5, "f", 45, "blaze=kindled", "", 400],
+	    ["create:blaze_burner", 30, 6, "f", 60, "blaze=seething", "", 400]
+	]
+	#─────────────────────────────────────────────────────────────────────────
+	# The maximum range of blocks' area of effect
+	# - Note: This will not change anything unless blocks are configured to utilize the expanded range
+	# - This value is limited to 16 for performance reasons
+	# Default: 7
+	# Range: 1 ~ 16
+	"Block Range" = 7
+	#─────────────────────────────────────────────────────────────────────────
+	# When set to true, uses Cold Sweat's temperature system to determine water freezing behavior
+	"Custom Freezing Behavior" = true
+	#─────────────────────────────────────────────────────────────────────────
+	# When set to true, modifies ice blocks to be harvestable with a pickaxe and tweaks its mining speed
+	"Custom Ice Drops" = true
+	#─────────────────────────────────────────────────────────────────────────
+	# The speed at which wet players dry off
+	# Default: 0.0015
+	# Range: 0.0 ~ Infinity
+	"Dryoff Speed" = 0.0015
+	#─────────────────────────────────────────────────────────────────────────
+	# The speed at which players become soaked when in water
+	# Default: 0.1
+	# Range: 0.0 ~ Infinity
+	"Water Soak Speed" = 0.1
+	#─────────────────────────────────────────────────────────────────────────
+	# The speed at which players become soaked when in rain
+	# Default: 0.0125
+	# Range: 0.0 ~ Infinity
+	"Rain Soak Speed" = 0.0125
+	#─────────────────────────────────────────────────────────────────────────
+	# The default temperature of water
+	# └── Format: [temperature, *units]
+	"Default Water Temperature" = [-10, "f"]
+	#─────────────────────────────────────────────────────────────────────────
+	# The maximum soak level a player can reach from rain alone (0.0 - 1.0)
+	# Default: 0.2
+	# Range: 0.0 ~ Infinity
+	"Max Rain Soak" = 0.2
+
+[Structures]
+	#─────────────────────────────────────────────────────────────────────────
+	# Overrides the world temperature when the player is within this structure
+	# ├── Format: [["structure_id", temperature, *units], [...], etc]
+	# └── [* = optional]
+	# • structure_id: The ID of the structure (i.e. "minecraft:stronghold")
+	# • temperature: The temperature of the structure, in Minecraft units
+	# • *units: The units of the temperature ("f" for Fahrenheit, "c" for Celsius, "mc" for Minecraft units)
+	"Structure Temperatures" = []
+	#─────────────────────────────────────────────────────────────────────────
+	# Offsets the world temperature when the player is within this structure
+	# ├── Format: [["structure_id", offset, *units], [...], etc]
+	# └── [* = optional]
+	# • structure_id: The ID of the structure (i.e. "minecraft:igloo")
+	# • offset: The temperature offset of the structure, in Minecraft units
+	# • *units: The units of the temperature ("f" for Fahrenheit, "c" for Celsius, "mc" for Minecraft units)
+	"Structure Temperature Offsets" = []
+
+[Misc]
+	#─────────────────────────────────────────────────────────────────────────
+	# A temperature offset applied when in complete shade or when the sky is overcast
+	# └── Format: [offset, *units]
+	"Shade Temperature Offset" = [-9, "f"]
+	#─────────────────────────────────────────────────────────────────────────
+	# List of blocks that will allow the player to sleep on them, regardless of the "Prevent Sleep When in Danger" setting
+	# Use this list if the player is not getting the temperature effect from sleeping on particular blocks
+	"Sleep Check Override Blocks" = ["#comforts:sleeping_bags"]
+	#─────────────────────────────────────────────────────────────────────────
+	# When set to true, players cannot sleep if they are cold or hot enough to die
+	"Check Sleeping Conditions" = true
+	#─────────────────────────────────────────────────────────────────────────
+	# Converts damage dealt by Soul Fire to cold damage (default: true)
+	# Does not affect the block's temperature
+	"Cold Soul Fire" = true
+
+#"Thermal sources" are blocks that have a smokestack and give frigidness/warmth. like the hearth, boiler, and iceobx
+["Thermal Sources"]
+	#─────────────────────────────────────────────────────────────────────────
+	# How effective thermal sources are at normalizing temperature
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	"Thermal Source Strength" = 0.75
+	#─────────────────────────────────────────────────────────────────────────
+	# List of additional blocks that thermal sources can spread through
+	# Use this list if thermal sources aren't spreading through particular blocks that they should
+	"Thermal Source Spread Whitelist" = ["minecraft:iron_bars", "#minecraft:leaves", "create:encased_fluid_pipe"]
+	#─────────────────────────────────────────────────────────────────────────
+	# List of additional blocks that thermal sources spread through
+	# Use this list if thermal sources are spreading through particular blocks that they shouldn't
+	"Thermal Source Spread Blacklist" = ["minecraft:water"]
+
+	["Thermal Sources".Hearth]
+		#─────────────────────────────────────────────────────────────────────────
+		# Allows the hearth to automatically turn on/off based on nearby players' temperature
+		# If false, it turns on/off by redstone signal instead
+		"Automatic Hearth" = false
+		#─────────────────────────────────────────────────────────────────────────
+		# The distance the hearth's air will travel from a source, like the hearth itself or the end of a pipe
+		# Default: 20
+		# Range: > 0
+		"Hearth Range" = 20
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum distance that air can be piped away from the hearth
+		# Default: 96
+		# Range: > 0
+		"Max Hearth Range" = 96
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum volume of the hearth's area of effect
+		# Default: 12000
+		# Range: > 1
+		"Hearth Volume" = 12000
+		#─────────────────────────────────────────────────────────────────────────
+		# The time it takes for the hearth to be fully functional after being placed
+		# Default: 1200
+		# Range: > 0
+		"Hearth Warm-Up Time" = 1200
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum amount of insulation that the hearth can provide
+		# Default: 10
+		# Range: 0 ~ 10
+		"Hearth Effect Strength" = 10
+		#─────────────────────────────────────────────────────────────────────────
+		# How often the hearth consumes fuel (in ticks)
+		# Lower numbers cause fuel to be consumed faster. Setting to 0 disables fuel consumption
+		# Default: 40
+		# Range: > 0
+		"Hearth Fuel Consumption Interval" = 40
+
+	["Thermal Sources".Boiler]
+		#─────────────────────────────────────────────────────────────────────────
+		# Allows the boiler to automatically turn on/off based on nearby players' temperature
+		# If false, it turns on/off by redstone signal instead
+		"Automatic Boiler" = false
+		#─────────────────────────────────────────────────────────────────────────
+		# The distance the boiler's air will travel from a source, like the boiler itself or the end of a pipe
+		# Default: 16
+		# Range: > 0
+		"Boiler Range" = 16
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum distance that air can be piped away from the boiler
+		# Default: 96
+		# Range: > 0
+		"Max Boiler Range" = 96
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum volume of the boiler's area of effect
+		# Default: 2000
+		# Range: > 1
+		"Boiler Volume" = 2000
+		#─────────────────────────────────────────────────────────────────────────
+		# The time it takes for the boiler to be fully functional after being placed
+		# Default: 1200
+		# Range: > 0
+		"Boiler Warm-Up Time" = 1200
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum amount of insulation that the boiler can provide
+		# Default: 5
+		# Range: 0 ~ 10
+		"Boiler Warmth Strength" = 5
+		#─────────────────────────────────────────────────────────────────────────
+		# How often the boiler consumes fuel (in ticks)
+		# Lower numbers cause fuel to be consumed faster. Setting to 0 disables fuel consumption
+		# Default: 40
+		# Range: > 0
+		"Boiler Fuel Consumption Interval" = 40
+
+	["Thermal Sources".Icebox]
+		#─────────────────────────────────────────────────────────────────────────
+		# Allows the icebox to automatically turn on/off based on nearby players' temperature
+		# If false, it turns on/off by redstone signal instead
+		"Automatic Icebox" = false
+		#─────────────────────────────────────────────────────────────────────────
+		# The distance the icebox's air will travel from a source, like the icebox itself or the end of a pipe
+		# Default: 16
+		# Range: > 0
+		"Icebox Range" = 16
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum distance that air can be piped away from the icebox
+		# Default: 96
+		# Range: > 0
+		"Max Icebox Range" = 96
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum volume of the icebox's area of effect
+		# Default: 2000
+		# Range: > 1
+		"Icebox Volume" = 2000
+		#─────────────────────────────────────────────────────────────────────────
+		# The time it takes for the icebox to be fully functional after being placed
+		# Default: 1200
+		# Range: > 0
+		"Icebox Warm-Up Time" = 1200
+		#─────────────────────────────────────────────────────────────────────────
+		# The maximum amount of insulation that the icebox can provide
+		# Default: 5
+		# Range: 0 ~ 10
+		"Icebox Chill Strength" = 5
+		#─────────────────────────────────────────────────────────────────────────
+		# How often the icebox consumes fuel (in ticks)
+		# Lower numbers cause fuel to be consumed faster. Setting to 0 disables fuel consumption
+		# Default: 40
+		# Range: > 0
+		"Icebox Fuel Consumption Interval" = 40
+
+	[Compatibility.Seasons]
+		#─────────────────────────────────────────────────────────────────────────
+		# Defines the temperature changes caused by each season
+		# ├── Format: [seasonStart, seasonMid, seasonEnd, *units]
+		# └── [* = optional]
+		# • seasonStart/Mid/End: The temperature offset at the start, middle, and end of the season
+		# • *units: The unit of temperature (C, F, or MC)
+		# ⌄ 
+		Summer = [0.2, 0.3, 0.2]
+		Autumn = [0.1, 0, -0.1]
+		Winter = [-0.2, -0.3, -0.2]
+		Spring = [-0.1, 0, 0.1]
